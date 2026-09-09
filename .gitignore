@@ -1,0 +1,26 @@
+# Python / environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+__MACOSX/
+
+# Datasets and archives (too large / not ours to redistribute)
+*.zip
+data/
+classification/dataset/*/
+calib_images/
+calib_data/
+
+# Training runs and model artifacts (publish via GitHub Releases instead)
+runs/
+*.pth
+*.onnx
+*.mxq
+
+# Mobilint SDK wheels
+*.whl

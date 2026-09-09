@@ -1,0 +1,7 @@
+torch
+torchvision
+numpy
+pillow
+onnx
+onnxruntime
+# NPU only (Mobilint SDK, install from vendor wheels): qubee, maccel
