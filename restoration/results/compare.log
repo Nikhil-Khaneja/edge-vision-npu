@@ -1,0 +1,32 @@
+arch=plain kwargs={} params=1.22M device=mps
+step 0  val PSNR 25.121 dB (model at init)
+step    500  loss 0.0333  lr 1.93e-04  val PSNR 25.677 dB  (6.4 min)  *best*
+step   1000  loss 0.0324  lr 1.59e-04  val PSNR 25.818 dB  (13.3 min)  *best*
+step   1500  loss 0.0359  lr 1.08e-04  val PSNR 25.897 dB  (20.6 min)  *best*
+step   2000  loss 0.0337  lr 5.49e-05  val PSNR 25.944 dB  (28.4 min)  *best*
+step   2500  loss 0.0376  lr 1.49e-05  val PSNR 25.965 dB  (36.2 min)  *best*
+step   3000  loss 0.0368  lr 1.00e-07  val PSNR 25.973 dB  (44.0 min)  *best*
+Done. best val PSNR 25.973 dB -> runs/cmp_plain/best.pth
+arch=dual kwargs={} params=2.66M device=mps
+step 0  val PSNR 25.121 dB (model at init)
+step    500  loss 0.0366  lr 1.93e-04  val PSNR 25.702 dB  (6.8 min)  *best*
+step   1000  loss 0.0382  lr 1.59e-04  val PSNR 25.892 dB  (16.0 min)  *best*
+step   1500  loss 0.0365  lr 1.08e-04  val PSNR 25.986 dB  (23.3 min)  *best*
+step   2000  loss 0.0333  lr 5.49e-05  val PSNR 26.037 dB  (33.4 min)  *best*
+step   2500  loss 0.0335  lr 1.49e-05  val PSNR 26.060 dB  (44.7 min)  *best*
+step   3000  loss 0.0315  lr 1.00e-07  val PSNR 26.066 dB  (55.1 min)  *best*
+Done. best val PSNR 26.066 dB -> runs/cmp_dual/best.pth
+arch=unet kwargs={} params=4.85M device=mps
+step 0  val PSNR 25.121 dB (model at init)
+step    500  loss 0.0297  lr 1.93e-04  val PSNR 25.622 dB  (9.8 min)  *best*
+step   1000  loss 0.0439  lr 1.59e-04  val PSNR 25.832 dB  (20.3 min)  *best*
+step   1500  loss 0.0329  lr 1.08e-04  val PSNR 25.936 dB  (28.7 min)  *best*
+step   2000  loss 0.0372  lr 5.49e-05  val PSNR 25.996 dB  (40.9 min)  *best*
+step   2500  loss 0.0274  lr 1.49e-05  val PSNR 26.024 dB  (52.2 min)  *best*
+step   3000  loss 0.0327  lr 1.00e-07  val PSNR 26.033 dB  (61.9 min)  *best*
+Done. best val PSNR 26.033 dB -> runs/cmp_unet/best.pth
+
+arch     params  best val PSNR  minutes
+plain     1.22M        25.973     44.0
+dual      2.66M        26.066     55.1
+unet      4.85M        26.033     61.9
