@@ -43,3 +43,6 @@ The NPU steps also need Mobilint's SDK, which is **not** on PyPI and not include
 
 ## Data
 Datasets are not included. See each project's README for the expected layout.
+
+## License
+[MIT](LICENSE)
