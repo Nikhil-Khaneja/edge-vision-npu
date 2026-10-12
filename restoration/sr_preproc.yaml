@@ -1,0 +1,17 @@
+# Qubee calibration preprocessing config (v0.12, qubee.calibration.make_calib)
+# Images are already 256x256, so no resize/crop. Only /255 scaling + HWC order,
+# matching training (dataset.to_tensor). At runtime the NPU is fed raw uint8
+# LR images in [256, 256, 3] (HWC) layout.
+Datatype: Image
+GetImage:
+    to_float32: false
+    channel_order: RGB
+
+Pre-Order: [Normalize, SetOrder]
+Pre-processing:
+    Normalize:
+        mean: [0.0, 0.0, 0.0]
+        std: [1.0, 1.0, 1.0]
+        to_float_div255: true
+    SetOrder:
+        shape: HWC
